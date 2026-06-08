@@ -1,41 +1,50 @@
 :root {
-  /* Surfaces */
-  --canvas: #f5f4f0;
-  --surface: #ffffff;
-  --surface-2: #faf9f6;
-  --line: #e6e5e1;
-  --line-strong: #d6d5d0;
+  /* Surfaces — carbon black */
+  --canvas: #0a0a0a;
+  --surface: #161616;
+  --surface-2: #1f1f1f;
+  --line: rgba(255, 255, 255, 0.12);
+  --line-strong: rgba(255, 255, 255, 0.22);
 
   /* Ink */
-  --ink: #191a1e;
-  --ink-soft: #5a5e68;
-  --ink-faint: #9aa0ac;
+  --ink: #f4f4f5;
+  --ink-soft: #a1a1aa;
+  --ink-faint: #6f7079;
 
-  /* Player identities */
-  --blue: #2d52b5;
-  --blue-soft: #3e66d6;
-  --blue-tint: #eaeffa;
+  /* Hub accent (Player 1) — signature amber-yellow */
+  --blue: #ff9000;
+  --blue-soft: #ffa733;
+  --blue-tint: rgba(255, 144, 0, 0.16);
   --p1: var(--blue);
   --p1-tint: var(--blue-tint);
 
-  --red: #c23a4b;
-  --red-soft: #d8505f;
-  --red-tint: #fbecee;
+  /* Player 2 — bright white */
+  --red: #ffffff;
+  --red-soft: #d4d4d8;
+  --red-tint: rgba(255, 255, 255, 0.12);
   --p2: var(--red);
   --p2-tint: var(--red-tint);
 
-  --good: #2e8b6a;
+  /* Black text for use on the amber/white fills */
+  --on-accent: #0a0a0a;
 
-  /* Type */
-  --ui: 'Hanken Grotesk', system-ui, sans-serif;
-  --display: 'Hanken Grotesk', system-ui, sans-serif;
+  /* Destructive / alert red */
+  --danger: #ff3b46;
+  --danger-soft: #ff5c66;
+  --danger-tint: rgba(255, 59, 70, 0.16);
 
-  /* Elevation (whisper-soft) */
-  --shadow-1: 0 1px 2px rgba(25, 26, 30, 0.04);
-  --shadow-2: 0 1px 2px rgba(25, 26, 30, 0.04), 0 10px 28px -18px rgba(25, 26, 30, 0.22);
-  --shadow-3: 0 2px 4px rgba(25, 26, 30, 0.05), 0 24px 60px -28px rgba(25, 26, 30, 0.3);
+  --good: #38d27e;
 
-  color-scheme: light;
+  /* Type — Montserrat */
+  --ui: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --display: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  /* Elevation */
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --shadow-2: 0 2px 6px rgba(0, 0, 0, 0.5), 0 12px 30px -18px rgba(0, 0, 0, 0.7);
+  --shadow-3: 0 4px 10px rgba(0, 0, 0, 0.55), 0 28px 64px -28px rgba(0, 0, 0, 0.8);
+
+  color-scheme: dark;
   font-family: var(--ui);
   color: var(--ink);
   background: var(--canvas);
@@ -88,7 +97,7 @@ ul, ol {
 
 ::selection {
   background: var(--blue);
-  color: #fff;
+  color: var(--on-accent);
 }
 
 @media (prefers-reduced-motion: reduce) {
