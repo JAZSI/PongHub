@@ -147,13 +147,17 @@ src/
 
 ## Deployment
 
-The app builds with a base path of `/PongHub/` (see [`vite.config.ts`](vite.config.ts)), ready for project-pages hosting such as GitHub Pages:
+PongHub ships with a GitHub Actions workflow ([`.github/workflows/deploy.yml`](.github/workflows/deploy.yml)) that builds with Bun and publishes to **GitHub Pages** on every push to `main`.
 
-```bash
-bun run build      # outputs to dist/
-```
+**One-time setup:**
 
-Serve `dist/` from a host mounted at `/PongHub/`. If you deploy somewhere else, change the `base` option in `vite.config.ts` to match.
+1. Name the repository **`PongHub`** so it matches the base path in [`vite.config.ts`](vite.config.ts) (`base: '/PongHub/'`).
+2. In the repo, go to **Settings → Pages → Build and deployment → Source** and select **GitHub Actions**.
+3. Push to `main` (or run the workflow manually from the **Actions** tab via *Run workflow*).
+
+The site goes live at `https://<your-username>.github.io/PongHub/`.
+
+> Deploying somewhere else, or to a user/root site? Change the `base` option in `vite.config.ts` to match (e.g. `'/'`), then `bun run build` and serve `dist/`.
 
 ## License
 
